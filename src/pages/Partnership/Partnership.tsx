@@ -1,4 +1,3 @@
-import { Container } from '@/components/Layout/Container/Container';
 import { List } from '@/components/Shared/List/List';
 
 import styles from './Partnership.module.scss';
