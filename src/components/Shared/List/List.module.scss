@@ -1,0 +1,40 @@
+.list {
+    list-style: none;
+    margin: 0;
+
+    &--small {
+        padding-left: 15px;
+
+        li {
+            font-size: 0.9rem;
+
+            &::before {
+                left: -15px;
+            }
+        }
+    }
+
+    &--large {
+        padding-left: 25px;
+
+        li {
+            font-size: 1.4rem;
+
+            &::before {
+                left: -25px;
+            }
+        }
+    }
+
+    li {
+        position: relative;
+        margin-bottom: 10px;
+
+        &::before {
+            content: '—';
+            position: absolute;
+            color: #a8a9ad;
+            font-weight: bold;
+        }
+    }
+}

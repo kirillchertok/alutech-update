@@ -8,6 +8,8 @@ import { GALLERY_IMAGES } from '@/constants/gallery';
 
 import styles from './Galery.module.scss';
 
+const PREVIEW_COUNT = 5;
+
 export const Gallery = () => {
     const [selected, setSelected] = useState<{
         groupIndex: number;
@@ -55,7 +57,7 @@ export const Gallery = () => {
                         >
                             <HeaderText>{group.header}</HeaderText>
                             <div className={styles.images}>
-                                {group.images.map((image, imageIndex) => (
+                                {group.images.slice(0, PREVIEW_COUNT).map((image, imageIndex) => (
                                     <img
                                         className={styles.image}
                                         key={image.src}

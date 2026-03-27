@@ -6,8 +6,8 @@ import { Results } from '@/pages/Results/Results';
 import { Virtual } from '@/pages/Virtual/Virtual';
 
 export const ROUTES = [
-    { path: '/', element: <History />, label: 'История' },
-    { path: '/announcements', element: <Announcements />, label: 'Анонсы' },
+    { path: '/', element: <Announcements />, label: 'Анонсы' },
+    { path: '/history', element: <History />, label: 'История' },
     { path: '/results', element: <Results />, label: 'Итоги' },
     { path: '/gallery', element: <Gallery />, label: 'Галерея' },
     { path: '/partnership', element: <Partnership />, label: 'Программа партнерства' },
