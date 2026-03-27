@@ -1,0 +1,110 @@
+.gallery {
+    height: 100%;
+    width: 75%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.images {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 10px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    aspect-ratio: 4 / 3;
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+
+.next {
+    background-color: #f4f4f4;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #e0e0e0;
+    }
+}
+
+.selected {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.77);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    cursor: pointer;
+    animation: fadeIn 0.2s ease;
+
+    &__image {
+        height: 90%;
+        max-width: 70%;
+        object-fit: contain;
+        cursor: default;
+        animation: zoomIn 0.2s ease;
+        user-select: none;
+    }
+
+    &__buttons {
+        cursor: pointer;
+        color: white;
+        font-size: 1.7rem;
+        transition: transform 0.5s ease;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__placeholder {
+        width: 50px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

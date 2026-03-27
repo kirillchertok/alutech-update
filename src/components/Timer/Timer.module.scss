@@ -1,0 +1,54 @@
+.container {
+    width: 17%;
+    position: absolute;
+    top: 95%;
+    left: 97%;
+    transform: translate(-95%, -97%);
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #aedfe5;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.header {
+    color: #a52868;
+    font-weight: 700;
+    font-size: 1.7rem;
+    text-align: center;
+    line-height: 30px;
+}
+
+.time {
+    background-color: white;
+    border-radius: 19px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+}
+
+.time_unit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amount {
+    color: #008ebd;
+    font-size: 2.5rem;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.measure {
+    color: #a52868;
+    font-size: 1rem;
+}

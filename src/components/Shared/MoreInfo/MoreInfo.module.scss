@@ -1,0 +1,12 @@
+.more_info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: black;
+
+    & svg {
+        margin-top: 1px;
+    }
+}
